@@ -11,7 +11,7 @@ local myversion = "0.1"
 local ver = game:HttpGet("https://raw.githubusercontent.com/ClipCorp/CodeCmd/main/version.txt")
 
 Prompt.Name = "Prompt"
-Prompt.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Prompt.Parent = game.CoreGui
 Prompt.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Cmd.Name = "Cmd"
