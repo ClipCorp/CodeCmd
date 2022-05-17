@@ -100,7 +100,7 @@ CommandSender.TextXAlignment = Enum.TextXAlignment.Left
 
 if myversion ~= ver then
 	Cmd:Destroy()
-	loadstring(game:HttpGet("https://www.toptal.com/developers/hastebin/ifuxequxow.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ClipCorp/CodeCmd/main/code.lua"))()
 end
 
 local function HHWCFCO_fake_script() -- WindowBar.Drag 
