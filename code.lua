@@ -8,7 +8,7 @@ local History = Instance.new("ScrollingFrame")
 local Background = Instance.new("TextBox")
 local CommandSender = Instance.new("TextBox")
 local myversion = "0.1"
-local ver = game:HttpGet("https://www.toptal.com/developers/hastebin/raw/ejonuhuxaj")
+local ver = game:HttpGet("https://raw.githubusercontent.com/ClipCorp/CodeCmd/main/version.txt")
 
 Prompt.Name = "Prompt"
 Prompt.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
