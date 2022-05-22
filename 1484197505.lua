@@ -1,6 +1,9 @@
+local Highlights = Instance.new("Folder",game:GetService("Workspace").CurrentCamera)
+Highlights.Name = "Hightlights"
+
 function Reselect()
 	for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-		local Highlight = Instance.new("Highlight",game:GetService("Workspace").CurrentCamera)
+		local Highlight = Instance.new("Highlight",game:GetService("Workspace").CurrentCamera:WaitForChild("Hightlights"))
 		Highlight.FillTransparency = 1
 		Highlight.Adornee = v.Character
 		Highlight.Name = v.DisplayName
@@ -9,7 +12,7 @@ end
 
 Reselect()
 
-game:GetService("Players").ChildAdded:Connect(function(player)
+game:GetService("Players").PlayerAdded:Connect(function(player)
 	for i,v in pairs(game:GetService("Workspace").CurrentCamera:GetChildren()) do
 		if v:IsA("Highlight") then
 			v:Destroy()
@@ -18,7 +21,7 @@ game:GetService("Players").ChildAdded:Connect(function(player)
     Reselect()
 end)
 
-game:GetService("Players").ChildRemoved:Connect(function(player)
+game:GetService("Players").PlayerRemoving:Connect(function(player)
 	game:GetService("Workspace").CurrentCamera:WaitForChild(player.DisplayName):Destroy()
 end)
 
